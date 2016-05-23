@@ -1,0 +1,1133 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"alar",
+				"alarm_time"
+			],
+			[
+				"al",
+				"alarm1_time"
+			],
+			[
+				"alarm",
+				"alarm_number"
+			],
+			[
+				"rgb",
+				"rgb_values"
+			],
+			[
+				"to",
+				"total_amount"
+			],
+			[
+				"t",
+				"total_hours"
+			],
+			[
+				"tota",
+				"total_amount"
+			],
+			[
+				"get",
+				"get_invoice_data"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"parse",
+				"parse_monthly_job_string"
+			],
+			[
+				"url",
+				"url_processor"
+			],
+			[
+				"jo",
+				"job_name"
+			],
+			[
+				"de",
+				"desc"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"task",
+				"task_str"
+			],
+			[
+				"time",
+				"time_str"
+			],
+			[
+				"tim",
+				"time_str"
+			],
+			[
+				"name",
+				"namedtuple"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"st",
+				"startdate"
+			],
+			[
+				"s",
+				"startdate"
+			],
+			[
+				"Test",
+				"TestJobName4"
+			],
+			[
+				"Monthly",
+				"MonthlyInvoice"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"date",
+				"date_to_search"
+			],
+			[
+				"on",
+				"oneoffs"
+			],
+			[
+				"get_",
+				"get_module_logger"
+			],
+			[
+				"ass",
+				"assertEqual"
+			],
+			[
+				"job",
+				"jobs_for_abc"
+			],
+			[
+				"create",
+				"create_engine"
+			],
+			[
+				"test",
+				"test_filename"
+			],
+			[
+				"boar",
+				"board_lists"
+			],
+			[
+				"geg",
+				"get_module_logger"
+			],
+			[
+				"tok",
+				"tokens"
+			],
+			[
+				"expected",
+				"expected_tokens"
+			],
+			[
+				"f",
+				"filter"
+			],
+			[
+				"ACt",
+				"Active"
+			],
+			[
+				"CL",
+				"ClientID"
+			],
+			[
+				"Month",
+				"MonthlyInvoice"
+			],
+			[
+				"Mon",
+				"MonthlyInvoice"
+			],
+			[
+				"In",
+				"Integer"
+			],
+			[
+				"Mont",
+				"MonthlyInvoices"
+			],
+			[
+				"this",
+				"this_task_date"
+			],
+			[
+				"Da",
+				"DefaultRate"
+			],
+			[
+				"co",
+				"Column"
+			],
+			[
+				"logg",
+				"get_module_logger"
+			],
+			[
+				"all",
+				"all_previous"
+			],
+			[
+				"month",
+				"month_number"
+			],
+			[
+				"en",
+				"engine"
+			],
+			[
+				"num",
+				"numeric_id"
+			],
+			[
+				"inv",
+				"invoices"
+			],
+			[
+				"in",
+				"invoice"
+			],
+			[
+				"from",
+				"fromtimestamp"
+			],
+			[
+				"stat",
+				"staticmethod"
+			],
+			[
+				"Client",
+				"ClientID"
+			],
+			[
+				"one",
+				"oneoff"
+			],
+			[
+				"dat",
+				"date"
+			],
+			[
+				"Cliet",
+				"ClientID"
+			],
+			[
+				"ex",
+				"extra_id"
+			],
+			[
+				"active",
+				"active_only"
+			],
+			[
+				"nu",
+				"numeric_id"
+			],
+			[
+				"quer",
+				"query_rtn"
+			],
+			[
+				"qu",
+				"query_rtn"
+			],
+			[
+				"q",
+				"query_rtn"
+			],
+			[
+				"da",
+				"date_to_search"
+			],
+			[
+				"k",
+				"kwargs"
+			],
+			[
+				"oneo",
+				"oneoff"
+			],
+			[
+				"class",
+				"classmethod"
+			],
+			[
+				"client",
+				"client_id"
+			],
+			[
+				"cli",
+				"client_id"
+			],
+			[
+				"cl",
+				"client_id"
+			],
+			[
+				"oneof",
+				"oneoffs"
+			],
+			[
+				"uni",
+				"unique_months"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"o",
+				"OperationalError"
+			],
+			[
+				"clie",
+				"client_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "rgblamp/api.py",
+			"settings":
+			{
+				"buffer_size": 1977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rgblamp/forms.py",
+			"settings":
+			{
+				"buffer_size": 478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rgblamp/persistent_config.py",
+			"settings":
+			{
+				"buffer_size": 1146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rgblamp/templates/standard_view.html",
+			"settings":
+			{
+				"buffer_size": 1552,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 32.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/james/Github/rgb-lamp",
+		"/home/james/Github/rgb-lamp/rgblamp",
+		"/home/james/Github/rgb-lamp/rgblamp/templates"
+	],
+	"file_history":
+	[
+		"/home/james/Github/rgb-lamp/rgblamp/views.py",
+		"/home/james/Github/rgb-lamp/rgb-lamp.cfg",
+		"/home/james/Github/rgb-lamp/rgblamp/forms.py",
+		"/home/james/Github/rgb-lamp/rgblamp/persistent_config.py",
+		"/home/james/Github/rgb-lamp/rgblamp/templates/standard_view.html",
+		"/home/james/Github/rgb-lamp/rgblamp/api.py",
+		"/home/james/Github/rgb-lamp/rgblamp/__init__.py",
+		"/home/james/Github/rgb-lamp/rgblamp/messaging.py",
+		"/home/james/Github/rgb-lamp/run.py",
+		"/home/james/Github/zguide/examples/Python/hwclient.py",
+		"/home/james/Github/zguide/examples/Python/hwserver.py",
+		"/home/james/Github/zguide/examples/Python/kvsimple.py",
+		"/home/james/Github/rgb-lamp/rgblamp/blueprints.py",
+		"/home/james/ltc4010-question",
+		"/home/james/Github/neopixel-serial/neopixel-serial.ino",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/jobs.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/tables.html",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/task_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/views/task_views.py",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/tasks.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/trello.py",
+		"/home/james/Github/TimeTracker/TimeTracker/views/job_views.py",
+		"/home/james/Github/TimeTracker/TimeTracker/views/invoice_views.py",
+		"/home/james/Github/TimeTracker/TimeTracker/views/client_views.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/monthly_invoice_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/invoice_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/oneoff_controller.py",
+		"/home/james/Documents/Electronics/Projects/quad-serial/quad-serial-F.Cu.gbr",
+		"/home/james/Github/TimeTracker/instance/invoice-data.yaml",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/invoices.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/client_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/static/invoices.js",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/view.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/job_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/clients.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/debug.args.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/forms.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/invoice.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/invoice.template.pdf.html",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/oneoff.template.pdf.html",
+		"/home/james/.local/share/Trash/files/oneoff.template.html",
+		"/home/james/Github/TimeTracker/TimeTracker/__init__.py",
+		"/home/james/Github/TimeTracker/TimeTracker.cfg",
+		"/home/james/Github/TimeTracker/invoice-data.yaml",
+		"/home/james/Github/TimeTracker/TimeTracker/templates/oneoff.template.html",
+		"/home/james/Videos/scrubs.sh",
+		"/home/james/Videos/Flight of the Conchords/fotc.sh",
+		"/home/james/Videos/Peep Show/peepshow.sh",
+		"/home/james/Videos/Peep Show/peepshop.sh",
+		"/home/james/Videos/Peep Show/pss1.sh",
+		"/home/james/Github/TimeTracker/TimeTracker/static/view.css",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/Tests/test_trello_controller.py",
+		"/home/james/Videos/Thunderbirds/thunderbirds.sh",
+		"/home/james/Github/TimeTracker/TimeTracker/static/sorttable.js",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/Tests/test_job_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/trellotasks.py",
+		"/home/james/Github/TimeTracker/TimeTracker/db.py",
+		"/home/james/Github/TimeTracker/run.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/Tests/test_oneoff_controller.py",
+		"/home/james/Github/TimeTracker/TimeTracker/utility.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/test_oneoff_controller.py",
+		"/home/james/Github/TimeTracker/schema.sql",
+		"/home/james/ap_manager.cpp",
+		"/home/james/Github/TimeTracker/TimeTracker/views/char * s_ssids[32];",
+		"/home/james/Github/TimeTracker/TimeTracker/views/__init__.py",
+		"/home/james/Documents/Scripts/password-helper.py",
+		"/home/james/Github/TimeTracker/run_test.py",
+		"/home/james/Github/TimeTracker/TimeTracker/controllers/Tests/job_controller.test.py",
+		"/home/james/Github/TimeTracker/TimeTracker/display_helper.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/base.py",
+		"/home/james/Documents/Code/TimeTracker/schema.sql",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/views/invoice_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/controllers/monthly_invoice_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/trellotasks.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/controllers/oneoff_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/views/client_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/static/invoice.css",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/invoice.template.pdf.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/invoices.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/views/job_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/jobs.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/views/task_views.py",
+		"/home/james/Documents/Code/TimeTracker/run.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker.cfg",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/__init__.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/flask_config",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/controllers/job_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/controllers/task_controller.py",
+		"/home/james/Documents/Code/TimeTracker/client_controller.py",
+		"/home/james/Documents/Code/TimeTracker/base.py",
+		"/home/james/Documents/Code/TimeTracker/templates/tasks.template.html",
+		"/home/james/Documents/Code/TimeTracker/task_controller.py",
+		"/home/james/Documents/Code/TimeTracker/db.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/display_helper.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/controllers/invoice_controller.py",
+		"/home/james/Documents/Code/TimeTracker/flask_config",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/.git/hooks/pre-push.sample",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/.git/hooks/pre-push",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/db.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/invoice_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/client_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/job_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/monthly_invoice_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/task_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/oneoff_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/invoice.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/invoice_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/task_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/tables.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/job_views.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/client_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/tasks.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/utility.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/task_job_controller.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/oneoff.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/forms.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/clients.template.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/static/invoices.js",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/utlity.py",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/clients.template.html~",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/jobs.template.html~",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/debug.args.html",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/static/view.css",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/view.template.html",
+		"/home/james/oneoffs",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/TimeTracker.sublime-workspace",
+		"/home/james/Documents/Code/TimeTracker/TimeTracker/templates/view.template.html~",
+		"/home/james/Documents/Code/re-innov/CSV_Viewer/datamanager_tests.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"",
+			"/home/james/Github/TimeTracker/TimeTracker,-*.py~,-*.html~,-*.sublime*,-jquery.js",
+			"/home/james/Documents/GitHub/TimeTracker/TimeTracker,-*.py~,-*.html~,-*.sublime*,-jquery.js",
+			"/home/james/Documents/Github/TimeTracker/TimeTracker,-*.py~,-*.html~,-*.sublime*,-jquery.js",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~,-*.html~,-*.sublime*,-jquery.js",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~,-*.html~,-*.sublime*",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~,'*.html~,-*.sublime*",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~,-*.sublime*",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~,*.sublime*",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker,-*.py~",
+			"/home/james/Documents/Code/TimeTracker/TimeTracker"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alarm_time_str",
+			"api/alarm",
+			"alarm/1/time",
+			"alarm1_time",
+			"normal",
+			"brightness",
+			"lamp/brightness",
+			"PersistentConfig",
+			"label",
+			"_alarm",
+			"r_alarm",
+			"{:H}:{:M}",
+			"jsonify",
+			"config[\"alarm2_time\"]",
+			"persistent_config",
+			".format(alarm_number)",
+			"1",
+			"_time",
+			".r",
+			"InputField",
+			"<div>",
+			"get_for_job",
+			"tasks.template.html",
+			"render_client_tasks_table",
+			"get_oneoff",
+			"get_invoice_instance_data",
+			"month_name",
+			"get_client_data_for_month_for_render",
+			"img",
+			"Date",
+			"get_invoice_as_pdf",
+			"template.pdf",
+			"get_client_name",
+			"render_invoices_list",
+			"date_identifier",
+			"onInvoiceStateChange",
+			"_timestamp",
+			"SCRIPT_ROOT",
+			"invoices.js",
+			"state",
+			"get_invoice_data",
+			"parse_invoice_data",
+			"render_invoice_for_year",
+			"get_invoice_as_html",
+			"get_oneoff_invoice",
+			"querying oneoff",
+			"template.pdf",
+			"oneoff.template",
+			"page_title",
+			"render_template",
+			"invoices.",
+			"invoices",
+			"get_oneoff_invoice",
+			".iso.iso",
+			"render_new_job_form",
+			"<form",
+			"Active Jobs",
+			"bootstrap",
+			"check_job_name_exists_or_error",
+			"try_parse_for_description",
+			"task.",
+			"parse_oneoff_task_string",
+			"OneOffTask",
+			"data",
+			"validate_oneoff_trello_data",
+			"['",
+			"parse_monthly_job_string",
+			"params",
+			"parse_oneoff_job_string",
+			"task.",
+			"validate_monthly_trello_data",
+			"generate_oneoff_task_info",
+			"get_client_id_and_job",
+			"text",
+			"task",
+			"to_dict",
+			"task",
+			"\"",
+			"parse_monthly_job_string",
+			"task_to_dict",
+			"to_dict",
+			":",
+			"MonthlyTask",
+			"parse_monthly_job_string",
+			"MonthlyTask",
+			"add_monthly_task_from_trello_data",
+			"generate_monthly_task_info",
+			"data['task']",
+			"validate_monthly_trello_data",
+			"parse_monthly_job_string",
+			"generate_monthly_task_info",
+			"parse_monthly_job_string",
+			"add_monthly_task_from_trello_data",
+			"generate_monthly_task_info",
+			"get_tasks",
+			"input",
+			":",
+			"p",
+			"generate_monthly_task_info",
+			"get_tasks",
+			"generate_monthly_task_info",
+			"['start']",
+			"'end']",
+			"validate_monthly_trello_data",
+			"parse_for_times",
+			"try_parse_for_times",
+			"validate_monthly_trello_data",
+			"try_parse_for_Desc",
+			"result.Desc",
+			"get_client_from_tokens",
+			"MonthlyTask",
+			"parse_monthly_job_string",
+			"ML",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"client"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"cls.query",
+			"get_client_data_for_month_for_render",
+			"get_monthly_invoices_for_client",
+			"format_address_for_display"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "rgblamp/api.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1713,
+								1713
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rgblamp/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "rgblamp/persistent_config.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								374,
+								374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rgblamp/templates/standard_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 282.0
+	},
+	"pinned_build_system": "",
+	"project": "rgblamp.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"trello",
+				"TimeTracker/controllers/trello.py"
+			],
+			[
+				"one",
+				"TimeTracker/controllers/oneoff_controller.py"
+			],
+			[
+				"job",
+				"TimeTracker/views/job_views.py"
+			],
+			[
+				"client",
+				"TimeTracker/views/client_views.py"
+			],
+			[
+				"tr",
+				"TimeTracker/trellotasks.py"
+			],
+			[
+				"ta",
+				"templates/tables.html"
+			],
+			[
+				"templa",
+				"templates/jobs.template.html"
+			],
+			[
+				"tables",
+				"templates/tables.html"
+			],
+			[
+				"jobs",
+				"templates/jobs.template.html"
+			],
+			[
+				"form",
+				"templates/forms.html"
+			],
+			[
+				"template",
+				"templates/jobs.template.html"
+			],
+			[
+				"clien",
+				"client_views.py"
+			],
+			[
+				".html",
+				"templates/invoices.template.html"
+			],
+			[
+				".js",
+				"static/invoices.js"
+			],
+			[
+				"invoic",
+				"invoice_views.py"
+			],
+			[
+				"oneoff",
+				"templates/oneoff.template.html"
+			],
+			[
+				"inv",
+				"invoice_controller.py"
+			],
+			[
+				"table",
+				"templates/tables.html"
+			],
+			[
+				"invoice",
+				"invoice_controller.py"
+			],
+			[
+				"on",
+				"templates/oneoff.template.html"
+			],
+			[
+				"invoi",
+				"invoice_views.py"
+			],
+			[
+				"month",
+				"monthly_invoice_controller.py"
+			],
+			[
+				"db",
+				"db.py"
+			],
+			[
+				"task",
+				"task_job_controller.py"
+			],
+			[
+				"css",
+				"static/view.css"
+			],
+			[
+				"jo",
+				"job_views.py"
+			],
+			[
+				"task_",
+				"task_job_controller.py"
+			],
+			[
+				"tem",
+				"templates/invoices.template.html"
+			],
+			[
+				"dis",
+				"display_helper.py"
+			],
+			[
+				"displa",
+				"display_helper.py"
+			],
+			[
+				"mon",
+				"monthly_invoice_controller.py"
+			],
+			[
+				".py",
+				"__init__.py"
+			],
+			[
+				"view",
+				"templates/view.template.html"
+			],
+			[
+				"con",
+				"task_job_controller.py"
+			],
+			[
+				"invoices",
+				"invoice_views.py"
+			],
+			[
+				"clie",
+				"client_controller.py"
+			],
+			[
+				"invo",
+				"invoice_controller.py"
+			],
+			[
+				"app",
+				"display_helper.py"
+			],
+			[
+				"tempalte",
+				"templates/tasks.template.html"
+			],
+			[
+				"tasks",
+				"templates/tasks.template.html"
+			],
+			[
+				"pdf.",
+				"templates/invoice.template.pdf.html"
+			],
+			[
+				"jobs.",
+				"templates/jobs.template.html"
+			],
+			[
+				"cli",
+				"client_controller.py"
+			],
+			[
+				"contro",
+				"client_controller.py"
+			],
+			[
+				"templ",
+				"templates/invoice.template.html"
+			],
+			[
+				"temp",
+				"templates/invoices.template.html"
+			],
+			[
+				"pdf.html",
+				"templates/invoice.template.pdf.html"
+			],
+			[
+				"helper",
+				"display_helper.py"
+			],
+			[
+				"contr",
+				"task_job_controller.py"
+			],
+			[
+				"view.",
+				"templates/view.template.html"
+			],
+			[
+				"",
+				"__init__.py"
+			],
+			[
+				"controll",
+				"task_job_controller.py"
+			],
+			[
+				"in",
+				"client_views.py"
+			],
+			[
+				"jobs.t",
+				"templates/jobs.template.html"
+			],
+			[
+				"_con",
+				"task_job_controller.py"
+			],
+			[
+				"tas",
+				"task_views.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
