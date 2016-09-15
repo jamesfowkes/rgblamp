@@ -1,12 +1,14 @@
 from flask import Blueprint, request, render_template
 
+from rgblamp import app
+
 from rgblamp.forms import ConfigForm
 
 from rgblamp.persistent_config import PersistentConfig
 
 standard_view = Blueprint('standard_view', __name__, template_folder='templates')
 
-config = PersistentConfig("rgblamp.cfg")
+config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
 @standard_view.route("/", methods=['GET', 'POST'])
 def homepage():

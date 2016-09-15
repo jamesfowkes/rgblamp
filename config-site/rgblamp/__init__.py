@@ -1,4 +1,7 @@
 import datetime
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 from flask import Flask
 from flask_bootstrap import Bootstrap
@@ -18,7 +21,7 @@ app.register_blueprint(api)
 
 from rgblamp.persistent_config import PersistentConfig
 
-config = PersistentConfig("rgblamp.cfg")
+config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
 config.set_defaults(
 	alarm1_time=datetime.time(7,0,0),
