@@ -4,7 +4,7 @@ import datetime
 
 from flask import Blueprint, request, Response
 
-from rgblamp.persistent_config import PersistentConfig
+from config.persistent_config import PersistentConfig
 
 def get_logger():
 	return logging.getLogger(__name__)

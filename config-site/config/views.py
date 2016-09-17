@@ -1,10 +1,10 @@
 from flask import Blueprint, request, render_template
 
-from rgblamp import app
+from config import app
 
-from rgblamp.forms import ConfigForm
+from config.forms import ConfigForm
 
-from rgblamp.persistent_config import PersistentConfig
+from config.persistent_config import PersistentConfig
 
 standard_view = Blueprint('standard_view', __name__, template_folder='templates')
 

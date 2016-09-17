@@ -13,13 +13,13 @@ app.config.from_envvar("RGBLAMP_CONFIG")
 CsrfProtect(app)
 Bootstrap(app)
 
-from rgblamp.views import standard_view
-from rgblamp.api import api
+from config.views import standard_view
+from config.api import api
 
 app.register_blueprint(standard_view)
 app.register_blueprint(api)
 
-from rgblamp.persistent_config import PersistentConfig
+from config.persistent_config import PersistentConfig
 
 config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
