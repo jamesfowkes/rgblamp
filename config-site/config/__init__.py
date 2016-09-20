@@ -1,3 +1,4 @@
+import os
 import datetime
 import logging
 
@@ -8,7 +9,7 @@ from flask_bootstrap import Bootstrap
 from flask_wtf.csrf import CsrfProtect
 
 app = Flask(__name__)
-app.config.from_envvar("RGBLAMP_CONFIG")
+app.config.from_envvar("RGBLAMP_CONFIG_SERVER_CONFIG_PATH")
 
 CsrfProtect(app)
 Bootstrap(app)
@@ -21,6 +22,7 @@ app.register_blueprint(api)
 
 from config.persistent_config import PersistentConfig
 
+logging.info("Attempting to load config from {}".format(app.config["SHELVE_FILENAME"]))
 config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
 config.set_defaults(

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ run.py
 
 Usage:
@@ -16,6 +18,7 @@ from config import app
 
 if __name__ == "__main__":
 	logging.basicConfig(level=logging.INFO)
+
 	options = docopt.docopt(__doc__)
 
 	port = int(os.getenv("RGBLAMP_CONFIG_PORT"))
