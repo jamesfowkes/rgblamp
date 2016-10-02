@@ -9,21 +9,24 @@ class PersistentConfig:
 
 	def __init__(self, filename):
 		self.__dict__["filename"] = filename
-
+		
 	def get(self, key):
 		with shelve.open(self.filename) as shelf:
 			try:
 				v = shelf[key]
 				get_logger().info("Getting {}={}:".format(key, v))
 				return v
-			except:
+			except KeyError:
+				get_logger().warning("Could not get value for key {}".format(key))
 				return None
-				
+
 	def __getitem__(self, key):
-		return self.get(key)
+		if key == "filename":
+			return self.__dict__["filename"]
+		else:
+			return self.get(key)
 	
 	def __getattr__(self, attr):
-
 		if attr == "filename":
 			return self.__dict__["filename"]
 

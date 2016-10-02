@@ -10,12 +10,14 @@ def get_logger():
  
 class HTTPAlarmDataProvider:
 
-	def __init__(self, url):
-		self.url = url
+    def __init__(self, url):
+        self.url = url
 
-	def get_time(self, n):
-	    resp = requests.get("%salarm/%d/time" % (self.url, n))
-	    time_str = resp.json()['time']
-	    time = datetime.datetime.strptime(time_str, "%H:%M").time()
-	    get_logger().info("Got time for alarm 1: %s", time_str)
-	    return time
+    def get_time(self, n):
+        get_logger().info("Requesting time for alarm {}".format(n))
+        resp = requests.get("%s/alarm/%d/time" % (self.url, n))
+        get_logger().info("Got response {}".format(resp))
+        time_str = resp.json()['time']
+        time = datetime.datetime.strptime(time_str, "%H:%M").time()
+        get_logger().info("Got time for alarm 1: %s", time_str)
+        return time

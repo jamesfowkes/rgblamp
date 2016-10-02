@@ -1,5 +1,6 @@
 import datetime
 import logging
+import os
 
 from collections import namedtuple
 from itertools import tee
@@ -7,6 +8,7 @@ from itertools import tee
 from transitions import Machine
 
 from alarm import Alarm
+from alarm_data_provider import HTTPAlarmDataProvider
 
 def pairwise(iterable):
     a, b = tee(iterable)
@@ -25,7 +27,7 @@ def alarm_state_str_to_index(alarm_string):
     return alarm_number
 
 def get_state_strings(state_count):
-    states =  ["alarm%d" % (i+1) for i in xrange(state_count)]
+    states =  ["alarm%d" % (i+1) for i in range(state_count)]
     states.insert(0, "no_alarm")
     return states
 
@@ -49,7 +51,7 @@ class AlarmManager:
 
         self.machine = Machine(model=self, states=states, initial="no_alarm")
         
-        self.alarms = [Alarm(alarm_time_provider, n+1) for n in xrange(alarm_count)]
+        self.alarms = [Alarm(alarm_time_provider, n+1) for n in range(alarm_count)]
         
         self.add_state_transitions(states)
 
@@ -86,3 +88,12 @@ class AlarmManager:
     def cancel(self):
         for alarm in self.alarms:
             alarm.cancel()
+
+if __name__ == "__main__":
+
+    logging.basicConfig(level=logging.INFO)
+    alarm_config_url = "http://0.0.0.0:" + os.getenv("RGBLAMP_CONFIG_PORT") + "/api"
+    get_logger().info("Configuration URL: {}".format(alarm_config_url))
+    alarm_time_provider = HTTPAlarmDataProvider(alarm_config_url)
+    
+    manager = AlarmManager(alarm_time_provider, 2)

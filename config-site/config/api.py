@@ -4,6 +4,7 @@ import datetime
 
 from flask import Blueprint, request, Response
 
+from config import app
 from config.persistent_config import PersistentConfig
 
 def get_logger():
@@ -11,7 +12,7 @@ def get_logger():
 
 api = Blueprint('api', __name__)
 
-config = PersistentConfig("rgblamp.cfg")
+config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
 def rgb_string_to_tuple(rgb):
 	rgb = rgb.split(",")
