@@ -13,7 +13,7 @@ def get_button_states():
 port = int(os.getenv("RGBLAMP_BUTTON_PORT"))
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server_socket.bind((socket.gethostname(), port))
+server_socket.bind(('', port))
 server_socket.listen(5)
 
 while True:

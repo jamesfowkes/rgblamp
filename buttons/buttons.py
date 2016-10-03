@@ -1,7 +1,7 @@
 import logging
 from collections import namedtuple
 
-Button = namedtuple('Button', ['text', 'handler'])
+Button = namedtuple('Button', ['text', 'handler', 'number'])
 
 def get_logger():
     return logging.getLogger(__name__)
@@ -41,21 +41,13 @@ def on_alarm_cancel(alarm_manager, lamp):
     alarm_manager.cancel()
 
 BUTTONS = [
-    Button("Change Alarm", on_alarm_change),
-    Button("Light On/Off", on_onoff_button),
-    Button("Bright", on_bright_button),
-    Button("Dim", on_dim_button),
-    Button("Colour Change", on_cycle_button),
-    Button("Snooze", on_snooze_button)
+    Button("Change Alarm", on_alarm_change, 0),
+    Button("Light On/Off", on_onoff_button, 1),
+    Button("Bright", on_bright_button, 2),
+    Button("Dim", on_dim_button, 3),
+    Button("Colour Change", on_cycle_button, 4),
+    Button("Snooze", on_snooze_button, 5)
 ]
-
-class ButtonStateProvider:
-
-    def __init__(self):
-        pass
-
-    def get_pressed(self):
-        raise Exception("Must be overridden by superclass")
 
 class ButtonsManager:
 
@@ -78,8 +70,9 @@ class ButtonsManager:
 
     def update(self, alarm_manager, lamp):
 
+        button_states = self.button_state_provider.get_state()
         for button in self.all_buttons():
-            if self.button_state_provider.is_pressed(button):
+            if button_states[button.number]:
                 self.handle_button_press(button, alarm_manager, lamp)
 
     def handle_button_press(self, button, alarm_manager, lamp):

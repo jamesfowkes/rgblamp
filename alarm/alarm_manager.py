@@ -7,8 +7,7 @@ from itertools import tee
 
 from transitions import Machine
 
-from alarm import Alarm
-from alarm_data_provider import HTTPAlarmDataProvider
+from rgblamp.alarm.alarm import Alarm
 
 def pairwise(iterable):
     a, b = tee(iterable)
@@ -88,12 +87,3 @@ class AlarmManager:
     def cancel(self):
         for alarm in self.alarms:
             alarm.cancel()
-
-if __name__ == "__main__":
-
-    logging.basicConfig(level=logging.INFO)
-    alarm_config_url = "http://0.0.0.0:" + os.getenv("RGBLAMP_CONFIG_PORT") + "/api"
-    get_logger().info("Configuration URL: {}".format(alarm_config_url))
-    alarm_time_provider = HTTPAlarmDataProvider(alarm_config_url)
-    
-    manager = AlarmManager(alarm_time_provider, 2)
