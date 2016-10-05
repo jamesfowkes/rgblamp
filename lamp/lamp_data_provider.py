@@ -1,5 +1,3 @@
-from __future__ import division
-
 import requests
 
 import logging
@@ -15,13 +13,13 @@ class HTTPLampDataProvider:
     def get_normal_brightness(self):
         resp = requests.get(self.url + "lamp/brightness/normal")
         brightness = resp.json()['brightness'] / 100
-        get_logger().info("Got normal brightness: %d%%", brightness)
+        get_logger().info("Got normal brightness: %.2f%%", brightness)
         return brightness
 
     def get_alarm_brightness(self, alarm_state):
         resp = requests.get(self.url + "lamp/brightness/alarm")
         brightness = resp.json()['brightness'] / 100
-        get_logger().info("Got alarm brightness: %d%%", brightness)
+        get_logger().info("Got alarm brightness: %.2f%%", brightness)
         return brightness * alarm_state
 
     def get_normal_rgb(self):

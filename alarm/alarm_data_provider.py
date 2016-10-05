@@ -15,7 +15,7 @@ class HTTPAlarmDataProvider:
 
     def get_time(self, n):
         get_logger().info("Requesting time for alarm {}".format(n))
-        resp = requests.get("%s/alarm/%d/time" % (self.url, n))
+        resp = requests.get(self.url + "alarm/%d/time" % (n))
         get_logger().info("Got response {}".format(resp))
         time_str = resp.json()['time']
         time = datetime.datetime.strptime(time_str, "%H:%M").time()

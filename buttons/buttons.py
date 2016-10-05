@@ -1,4 +1,6 @@
 import logging
+import datetime
+
 from collections import namedtuple
 
 Button = namedtuple('Button', ['text', 'handler', 'number'])
@@ -58,7 +60,9 @@ class ButtonsManager:
         self.button_state_provider = button_state_provider
 
         self.cancel_alarm_callback = on_alarm_cancel
-       
+
+        self.last_press = datetime.datetime.now()    
+    
     def __getitem__(self, key):
         return self.all_buttons()[key]
 
@@ -70,10 +74,12 @@ class ButtonsManager:
 
     def update(self, alarm_manager, lamp):
 
-        button_states = self.button_state_provider.get_state()
-        for button in self.all_buttons():
-            if button_states[button.number]:
-                self.handle_button_press(button, alarm_manager, lamp)
+        if (datetime.datetime.now() - self.last_press).microseconds > 500000:
+            button_states = self.button_state_provider.get_state()
+            for button in self.all_buttons():
+                if button_states[button.number]:
+                    self.last_press = datetime.datetime.now()
+                    self.handle_button_press(button, alarm_manager, lamp)
 
     def handle_button_press(self, button, alarm_manager, lamp):
         
