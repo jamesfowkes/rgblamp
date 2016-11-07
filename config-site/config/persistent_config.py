@@ -14,7 +14,7 @@ class PersistentConfig:
 		with shelve.open(self.filename) as shelf:
 			try:
 				v = shelf[key]
-				get_logger().info("Getting {}={}:".format(key, v))
+				get_logger().info("Getting {}={}".format(key, v))
 				return v
 			except KeyError:
 				get_logger().warning("Could not get value for key {}".format(key))

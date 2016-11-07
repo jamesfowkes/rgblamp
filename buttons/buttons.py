@@ -37,7 +37,13 @@ def on_snooze_button(alarm_manager, lamp):
 def on_alarm_change(alarm_manager, lamp):
     get_logger().info("Handling alarm change")
     alarm_manager.set_next()
-    
+    if alarm_manager.current_alarm is None:
+        lamp.flash(16, 0, 0, 1)
+    elif alarm_manager.current_alarm.n == 1:
+        lamp.flash(0, 16, 0, 1)
+    elif alarm_manager.current_alarm.n == 2:
+        lamp.flash(0, 0, 16, 1)
+
 def on_alarm_cancel(alarm_manager, lamp):
     get_logger().info("Handling alarm cancel")
     alarm_manager.cancel()

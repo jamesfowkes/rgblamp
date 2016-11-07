@@ -1,6 +1,14 @@
+#!/usr/bin/python3
+""" application.py
+Usage:
+    application.py <delay>
+
+"""
 import logging
 import os
 import datetime
+import time
+import docopt
 
 from rgblamp.buttons.buttons import ButtonsManager
 from rgblamp.alarm.alarm_manager import AlarmManager
@@ -12,7 +20,12 @@ from rgblamp.lamp.lamp_data_provider import HTTPLampDataProvider
 def get_logger():
     return logging.getLogger(__name__)
 
+
 if __name__ == "__main__":
+
+    args = docopt.docopt(__doc__)
+
+    time.sleep(int(args["<delay>"]))
 
     logging.basicConfig(level=logging.INFO)
     
@@ -33,6 +46,9 @@ if __name__ == "__main__":
     alarm_manager = AlarmManager(alarm_time_provider, 2)
     buttons_manager = ButtonsManager(button_state_provider)
     lamp = Lamp(lamp_data_provider, lamp_controller)
+
+    lamp.flash(255, 255, 255, 10)
+    time.sleep(1)
 
     while(True):
         alarm_level = alarm_manager.update_time(datetime.datetime.now())

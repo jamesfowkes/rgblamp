@@ -12,15 +12,15 @@ class HTTPLampDataProvider:
 
     def get_normal_brightness(self):
         resp = requests.get(self.url + "lamp/brightness/normal")
-        brightness = resp.json()['brightness'] / 100
-        get_logger().info("Got normal brightness: %.2f%%", brightness)
-        return brightness
+        brightness = resp.json()['brightness']
+        get_logger().info("Got normal brightness: %d%%", brightness)
+        return brightness / 100
 
     def get_alarm_brightness(self, alarm_state):
         resp = requests.get(self.url + "lamp/brightness/alarm")
-        brightness = resp.json()['brightness'] / 100
-        get_logger().info("Got alarm brightness: %.2f%%", brightness)
-        return brightness * alarm_state
+        brightness = resp.json()['brightness']
+        get_logger().info("Got alarm brightness: %d%%", brightness)
+        return brightness * alarm_state / 100
 
     def get_normal_rgb(self):
         resp = requests.get(self.url + "lamp/rgb/normal")
@@ -33,10 +33,3 @@ class HTTPLampDataProvider:
         rgb = resp.json()['rgb']
         get_logger().info("Got alarm rgb value: %d, %d, %d", *rgb)
         return rgb
-
-    def get_alarm_color(self, alarm_state):
-        r, g, b = self.get_alarm_rgb()
-
-        get_logger().info("Got colour %d, %d, %d", r,g,b)
-        
-        return [r*alarm_state, g*alarm_state, b*alarm_state]

@@ -48,7 +48,7 @@ class AlarmManager:
 
         states = get_state_strings(alarm_count)
 
-        self.machine = Machine(model=self, states=states, initial="no_alarm")
+        self.machine = Machine(model=self, states=states, initial="no_alarm", after_state_change='reset_current_alarm')
         
         self.alarms = [Alarm(alarm_time_provider, n+1) for n in range(alarm_count)]
         
@@ -56,8 +56,13 @@ class AlarmManager:
 
         self.last_update = time
 
+    def reset_current_alarm(self):
+        if self.current_alarm:
+            self.current_alarm.reset()
+               
     def update_required(self, time):
-        return self.last_update.minute != time.minute 
+        diff = self.last_update - time
+        return diff.seconds > 2 
 
     def __getitem__(self, key):
         return self.alarms[key]

@@ -24,7 +24,11 @@ class HTTPLampController:
     def set_rgb(self, r, g, b):
         get_logger().info("Requesting RGB values %d, %d, %d", r, g, b)
         resp = requests.get(self.url + "{}/{}/{}".format(r, g, b))
-        
+
+    def flash(self, r, g, b, count):
+        get_logger().info("Requesting %d flashes of RGB values %d, %d, %d", count, r, g, b)
+        resp = requests.get(self.url + "flash/{}/{}/{}/{}".format(r, g, b, count))
+
 class TimedFunction:
 
     def __init__(self, fn, **kwargs):
@@ -70,14 +74,10 @@ class Lamp:
     def set_brightness_from_alarm_state(self, alarm_state):
 
         new_brightness = self.lamp_data_provider.get_alarm_brightness(alarm_state)
-        get_logger().info("Setting brightness %d from state %d", new_brightness, alarm_state)
+        get_logger().info("Setting brightness %.2f from state %d", new_brightness, alarm_state)
 
         if self.current_brightness <= new_brightness:
             self.set_brightness(new_brightness)
-     
-    def set_colour_on_alarm_state(self, alarm_state):
-        new_colour = self.lamp_data_provider.get_alarm_color(alarm_state)
-        self.set_color(new_colour)
         
     def update(self, alarm_level):
 
@@ -106,7 +106,8 @@ class Lamp:
         
     def on_mode_alarm(self):
         self.set_brightness_from_alarm_state(self.last_alarm_state)
-        self.set_colour_on_alarm_state(self.last_alarm_state)
+        new_colour = self.lamp_data_provider.get_alarm_rgb()
+        self.set_color(new_colour)
 
     def change_mode(self, new_mode):
         get_logger().info("Setting mode " + self.MODE_STRINGS[new_mode])
@@ -179,3 +180,7 @@ class Lamp:
     def update_controller(self):
         r, g, b = self.get_color()
         self.lamp_controller.set_rgb(r, g, b)
+
+    def flash(self, r, g, b, count):
+        self.lamp_controller.flash(r, g, b, count)
+        self.update_controller()

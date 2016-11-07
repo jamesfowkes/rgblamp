@@ -56,7 +56,7 @@ def api_get_normal_brightness():
 @api.route("/api/lamp/brightness/alarm")
 def api_get_alarm_brightness():
 	get_logger().info("Handling /api/lamp/brightness/alarm")
-	brightness = config.default_brightness
+	brightness = config.alarm_brightness
 
 	return json.dumps(
 		{

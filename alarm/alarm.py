@@ -46,7 +46,9 @@ class Alarm:
 
         if not self.cancelled and in_alarm_period:
             state = diff_minutes / 30
+            state = state * state
 
+        get_logger().info("Alarm %d state: %s in alarm period, (%s cancelled)", self.n,  "" if in_alarm_period else "not", "" if self.cancelled else "not")
         return state
 
 class MockAlarmDataProvider:
