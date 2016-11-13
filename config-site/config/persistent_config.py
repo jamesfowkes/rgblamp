@@ -5,6 +5,10 @@ import logging
 def get_logger():
 	return logging.getLogger(__name__)
 
+def setup_logging(handler):
+	get_logger().setLevel(logging.INFO)
+	get_logger().addHandler(handler)
+
 class PersistentConfig:
 
 	def __init__(self, filename):

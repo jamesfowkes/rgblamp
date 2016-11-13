@@ -10,6 +10,10 @@ from config.persistent_config import PersistentConfig
 def get_logger():
 	return logging.getLogger(__name__)
 
+def setup_logging(handler):
+	get_logger().setLevel(logging.INFO)
+	get_logger().addHandler(handler)
+	
 api = Blueprint('api', __name__)
 
 config = PersistentConfig(app.config["SHELVE_FILENAME"])

@@ -44,7 +44,10 @@ class AlarmManager:
         self.machine.add_transition('next_alarm', new, 'no_alarm')
 
 
-    def __init__(self, alarm_time_provider, alarm_count, time=datetime.datetime.now()):
+    def __init__(self, alarm_time_provider, alarm_count, logging, time=datetime.datetime.now()):
+
+        get_logger().addHandler(logging[0])
+        get_logger().setLevel(logging[1])
 
         states = get_state_strings(alarm_count)
 

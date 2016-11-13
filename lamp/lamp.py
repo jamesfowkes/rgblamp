@@ -58,7 +58,11 @@ class Lamp:
     
     MODE_STRINGS = ["On", "Off", "Cycle", "Alarm"]
     
-    def __init__(self, lamp_data_provider, lamp_controller):
+    def __init__(self, lamp_data_provider, lamp_controller, logging):
+
+        get_logger().addHandler(logging[0])
+        get_logger().setLevel(logging[1])
+        
         self.lamp_data_provider = lamp_data_provider
         self.lamp_controller = lamp_controller
         self.current_brightness = 0

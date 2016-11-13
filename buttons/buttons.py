@@ -59,7 +59,10 @@ BUTTONS = [
 
 class ButtonsManager:
 
-    def __init__(self, button_state_provider):
+    def __init__(self, button_state_provider, logging):
+
+        get_logger().addHandler(logging[0])
+        get_logger().setLevel(logging[1])
 
         self.main_buttons = BUTTONS
 

@@ -2,8 +2,6 @@ import os
 import datetime
 import logging
 
-logging.basicConfig(level=logging.INFO)
-
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_wtf.csrf import CsrfProtect
@@ -22,7 +20,6 @@ app.register_blueprint(api)
 
 from config.persistent_config import PersistentConfig
 
-logging.info("Attempting to load config from {}".format(app.config["SHELVE_FILENAME"]))
 config = PersistentConfig(app.config["SHELVE_FILENAME"])
 
 config.set_defaults(

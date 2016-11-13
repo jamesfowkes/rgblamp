@@ -14,12 +14,13 @@
 DAEMON=python3
 DAEMON_NAME=rgblamp-application
 LOGFILE=/var/log/rgblamp/application.log
+START_DELAY=10
 
 # Source configuration options
 [ -f /etc/default/rgblamp/config ] && . /etc/default/rgblamp/config
 
 # Add any command line options for your daemon here
-DAEMON_OPTS="-m rgblamp.application.application 10"
+DAEMON_OPTS="-m rgblamp.application.application $START_DELAY $LOGFILE"
 
 # This next line determines what user the script runs as.
 # Root generally not recommended but necessary if you are using the Raspberry Pi GPIO from Python.
@@ -34,7 +35,7 @@ log_daemon_msg "Using config file $RGBLAMP_CONFIG_SERVER_CONFIG_PATH"
 
 do_start () {
     log_daemon_msg "Starting system $DAEMON_NAME daemon"
-    start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --chdir /home/pi --startas /bin/bash -- -c "exec $DAEMON $DAEMON_OPTS > $LOGFILE 2>&1"
+    start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --chdir /home/pi --startas /bin/bash -- -c "exec $DAEMON $DAEMON_OPTS"
     log_end_msg $?
 }
 do_stop () {
