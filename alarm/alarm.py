@@ -9,7 +9,10 @@ def get_logger():
 
 def times_straddle_midnight(alarm_time, current_time):
     return alarm_time.hour == 23 and alarm_time.minute >= 45 and current_time.hour == 0 and current_time.minute <=15
-    
+
+def get_state(minutes_into_alarm):
+    return (minutes_into_alarm * minutes_into_alarm) / (30*30);
+
 class Alarm:
 
     def __init__(self, alarm_time_provider, n):
@@ -45,8 +48,7 @@ class Alarm:
             self.cancelled = False
 
         if not self.cancelled and in_alarm_period:
-            state = diff_minutes / 30
-            state = state * state
+            state = get_state(diff_minutes)
 
         get_logger().info("Alarm %d state: %s in alarm period, (%s cancelled)", self.n,  "" if in_alarm_period else "not", "" if self.cancelled else "not")
         return state
@@ -55,6 +57,9 @@ class MockAlarmDataProvider:
 
     def __init__(self, time):
         self.time = time
+
+    def url(self):
+        return "mock"
 
     def get_time(self, n):
         return self.time
@@ -77,15 +82,20 @@ class AlarmTests(unittest.TestCase):
         state = alarm.update(self.get_test_datetime(9, 1))
         self.assertEqual(None, state)
 
-    def test_alarmIsOnThirdOnTenMinutesAfterTime(self):
+    def test_alarmIsInCorrectStateTenMinutesAfterTime(self):
         alarm = Alarm(MockAlarmDataProvider(datetime.time(7, 30)), 0)
         state = alarm.update(self.get_test_datetime(7, 40))
-        self.assertAlmostEqual(1 / 3, state)
+        self.assertAlmostEqual(get_state(10), state)
 
-    def test_alarmIsHalfOnFifteenMinutesAfterTime(self):
+    def test_alarmIsInCorrectStateFifteenMinutesAfterTime(self):
         alarm = Alarm(MockAlarmDataProvider(datetime.time(7, 30)), 0)
         state = alarm.update(self.get_test_datetime(7, 45))
-        self.assertAlmostEqual(0.5, state)
+        self.assertAlmostEqual(get_state(15), state)
+
+    def test_alarmIsInCorrectStateTwentyTwoMinutesAfterTime(self):
+        alarm = Alarm(MockAlarmDataProvider(datetime.time(7, 30)), 0)
+        state = alarm.update(self.get_test_datetime(7, 52))
+        self.assertAlmostEqual(get_state(22), state)
 
     def test_alarmIsOffAtEndOfDuration(self):
         alarm = Alarm(MockAlarmDataProvider(datetime.time(7, 30)), 0)
@@ -93,7 +103,9 @@ class AlarmTests(unittest.TestCase):
         self.assertEqual(None, state)
 
     def test_alarmHandlesCrossingMidnight(self):
-        alarm = Alarm(MockAlarmDataProvider(datetime.time(23, 45)), 0)
+
+        mock = MockAlarmDataProvider(datetime.time(23, 45))
+        alarm = Alarm(mock, 0)
         
         state = alarm.update(self.get_test_datetime(23,44))
         self.assertEqual(None, state)
@@ -101,19 +113,22 @@ class AlarmTests(unittest.TestCase):
         state = alarm.update(self.get_test_datetime(23,45))
         self.assertEqual(0, state)
         
-        state = alarm.update(self.get_test_datetime(0,0))
-        self.assertEqual(1/2, state)
+        state = alarm.update(self.get_test_datetime(0,0, 1))
+        self.assertEqual(get_state(15), state)
         
-        state = alarm.update(self.get_test_datetime(0,15))
+        t1 = self.get_test_datetime(0,15, 1)
+        t2 = datetime.datetime.combine(datetime.date.today(), mock.get_time(0))
+        
+        state = alarm.update(self.get_test_datetime(0,15, 1))
         self.assertEqual(1, state)
         
-        state = alarm.update(self.get_test_datetime(0,16))
+        state = alarm.update(self.get_test_datetime(0,16, 1))
         self.assertEqual(None, state)
         
     def test_alarmCanBeCancelledAfterActivation(self):
         alarm = Alarm(MockAlarmDataProvider(datetime.time(7, 30)), 0)
         state = alarm.update(self.get_test_datetime(7, 45))
-        self.assertAlmostEqual(0.5, state)
+        self.assertAlmostEqual(get_state(15), state)
         alarm.cancel()
         state = alarm.update(self.get_test_datetime(7, 45))
         self.assertEqual(None, state)
