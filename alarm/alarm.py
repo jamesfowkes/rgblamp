@@ -39,8 +39,6 @@ class Alarm:
 
         self.n = n
         self.alarm_time_provider = alarm_time_provider
-        get_logger().info("Getting alarm time from {}".format(self.alarm_time_provider.url))
-        self.alarm_time = self.alarm_time_provider.get_time(self.n)
         
         self.cancelled = False
         
