@@ -1,6 +1,7 @@
 import requests
 
 import logging
+import time
 
 def get_logger():
     return logging.getLogger(__name__)
@@ -9,6 +10,14 @@ class HTTPLampDataProvider:
 
     def __init__(self, url):
         self.url = url
+
+    def wait_for_connection(self):
+        while(True):
+            try:
+                resp = self.get_normal_brightness()
+                return
+            except requests.exceptions.ConnectionError:
+                time.sleep(1)
 
     def get_normal_brightness(self):
         resp = requests.get(self.url + "lamp/brightness/normal")

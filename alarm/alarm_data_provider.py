@@ -4,6 +4,7 @@ import requests
 
 import logging
 import datetime
+import time
 
 def get_logger():
     return logging.getLogger(__name__)
@@ -12,6 +13,14 @@ class HTTPAlarmDataProvider:
 
     def __init__(self, url):
         self.url = url
+
+    def wait_for_connection(self):
+        while(True):
+            try:
+                resp = self.get_time(1)
+                return
+            except requests.exceptions.ConnectionError:
+                time.sleep(1)
 
     def get_time(self, n):
         get_logger().info("Requesting time for alarm {}".format(n))

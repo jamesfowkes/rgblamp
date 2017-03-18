@@ -1,5 +1,6 @@
 import logging
 import socket
+import time
 
 def get_logger():
     return logging.getLogger(__name__)
@@ -14,6 +15,15 @@ class SocketButtonStateProvider:
     def __init__(self, url, port):
         self.url = url
         self.port = port
+
+
+    def wait_for_connection(self):
+        while(True):
+            try:
+                resp = self.get_state()
+                return
+            except requests.exceptions.ConnectionError:
+                time.sleep(1)
 
     def get_state(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
