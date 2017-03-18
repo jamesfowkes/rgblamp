@@ -3,7 +3,7 @@
 """ run.py
 
 Usage:
-    run.py <logfile> [--public]
+    run.py <logfile> [--public] [--debug]
 
 Options:
     --public    Server runs on a public IP (default is local only)
@@ -26,8 +26,15 @@ if __name__ == "__main__":
 
     args = docopt.docopt(__doc__)
 
+    formatter = logging.Formatter('%(asctime)s:%(name)s:%(levelname)s:%(message)s')
     logging_handler = logging.handlers.RotatingFileHandler(args["<logfile>"], maxBytes=1024*1024, backupCount=3)
-    get_logger().setLevel(logging.INFO)
+    logging_handler.setFormatter(formatter)
+    
+    if args["--debug"]:
+        logging.basicConfig(level=logging.INFO)
+    else:
+        logging.basicConfig(level=logging.DEBUG)
+
     get_logger().addHandler(logging_handler)
 
     api_setup_logging(logging_handler)
