@@ -32,10 +32,11 @@ PIDFILE=/tmp/$DAEMON_NAME.pid
 . /lib/lsb/init-functions
 
 log_daemon_msg "Using config file $RGBLAMP_CONFIG_SERVER_CONFIG_PATH"
+log_daemon_msg "Using port $RGBLAMP_APPLICATION_PORT"
 
 do_start () {
     log_daemon_msg "Starting system $DAEMON_NAME daemon"
-    start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --chdir /home/pi --startas /bin/bash -- -c "exec $DAEMON $DAEMON_OPTS"
+    start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --chdir /home/pi --startas /bin/bash -- -c "exec $DAEMON $DAEMON_OPTS > /var/log/rgblamp/application.daemon.log 2>&1"
     log_end_msg $?
 }
 do_stop () {
